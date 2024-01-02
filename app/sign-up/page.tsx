@@ -18,7 +18,7 @@ const SignUp = () => {
                     loading='lazy'
                 />
             </div>
-            <div className='auth-card space-y-2'>
+            <div className='auth-card space-y-4 overflow-y-auto py-4 cursor-move hide-scrollbar'>
                 <Image
                     src={'/images/logo.svg'}
                     alt='Stutorpal Logo'
@@ -28,7 +28,7 @@ const SignUp = () => {
                 />
                 <h1 className='text-2xl text-normal' style={{fontWeight: '300'}}>Create New Account</h1>
                 <SignupForm />
-                <p className='mx-auto text-sm'>Already have an account? <span>Login</span></p>
+                <p className='w-[fit-content] mx-auto text-sm'>Already have an account? <span>Login</span></p>
             </div>
         </div>
     </main>

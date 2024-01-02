@@ -17,9 +17,17 @@
     @apply bg-[#5DADE9];
   }
   .auth-card{
-    @apply bg-white md:w-[500px] h-[90%] rounded-[10px] flex flex-col justify-center px-10;
+    @apply bg-white md:w-[500px] lg:h-[520px] rounded-[10px] px-10;
   }
   .form-input{
     @apply border border-[#DBE2EA];
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  overflow-y: auto;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: transparent;
 }
