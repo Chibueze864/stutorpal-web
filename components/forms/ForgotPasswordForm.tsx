@@ -2,7 +2,7 @@
 import React from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { signInSchema } from '@/lib/validations'
+import { forgotPasswordSchema } from '@/lib/validations'
 import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import {
@@ -14,20 +14,18 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Link from 'next/link'
 
-const SigninForm = () => {
+const ForgotPasswordForm = () => {
     // 1. Define your form.
-  const form = useForm<z.infer<typeof signInSchema>>({
-    resolver: zodResolver(signInSchema),
+  const form = useForm<z.infer<typeof forgotPasswordSchema>>({
+    resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
       email: "",
-      password: "",
     },
   })
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof signInSchema>) {
+  function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values)
@@ -48,24 +46,10 @@ const SigninForm = () => {
                 </FormItem>
             )}
             />
-            <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-                <FormItem>
-                <FormLabel>Password</FormLabel>
-                <FormControl>
-                    <Input {...field} type='password'/>
-                </FormControl>
-                <FormMessage />
-                </FormItem>
-            )}
-            />
-            <Link href='/auth/forgotten-password' className='float-right text-sm text-primary-color clear-both'>Forgotten password?</Link>
-            <Button className='bg-primary-color text-white hover:text-black w-full rounded-[6px]' type="submit">SIGN IN</Button>
+            <Button className='bg-primary-color text-white hover:text-black w-full rounded-[6px]' type="submit">CONTINUE</Button>
         </form>
     </Form>
   )
 }
 
-export default SigninForm
+export default ForgotPasswordForm
