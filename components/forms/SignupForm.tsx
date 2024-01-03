@@ -24,6 +24,7 @@ const SignupForm = () => {
       name: "",
       email: "",
       password: "",
+      confirmPassword: ""
     },
   })
 
@@ -77,7 +78,7 @@ const SignupForm = () => {
             />
             <FormField
             control={form.control}
-            name="password"
+            name="confirmPassword"
             render={({ field }) => (
                 <FormItem>
                 <FormLabel>Confirm Password</FormLabel>
