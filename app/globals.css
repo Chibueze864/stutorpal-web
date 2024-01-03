@@ -13,6 +13,9 @@
   .bg-primary-color{
     @apply bg-[#003F91];
   }
+  .text-primary-color{
+    @apply text-[#003F91];
+  }
   .bg-secondary-color{
     @apply bg-[#5DADE9];
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import SignupForm from '@/components/forms/SignupForm'
+import Link from 'next/link'
 
 const SignUp = () => {
  
@@ -28,7 +29,9 @@ const SignUp = () => {
                 />
                 <h1 className='text-2xl text-normal' style={{fontWeight: '300'}}>Create New Account</h1>
                 <SignupForm />
-                <p className='w-[fit-content] mx-auto text-sm'>Already have an account? <span>Login</span></p>
+                <p className='w-[fit-content] mx-auto text-sm'>Already have an account? 
+                  <Link href = '/auth/sign-in' className='text-primary-color'> Login</Link>
+                </p>
             </div>
         </div>
     </main>
