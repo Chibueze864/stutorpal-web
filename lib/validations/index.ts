@@ -7,7 +7,6 @@ export const signUpSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8, {message: "Password must be at least 8 characters."}),
   confirmPassword: z.string()
-  // department: z.string(),
 }).refine((data) => data.confirmPassword === data.password, {
   message: "Passwords do not match.",
 })
